@@ -1,32 +1,41 @@
+/* Smooth modern gradient background */
 body {
-  font-family: Arial, sans-serif;
-  background: #506b93;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
   display: flex;
   justify-content: center;
   padding: 40px;
   margin: 0;
 }
 
+/* Main box */
 .container {
-  background: lightblue;
+  background: #ffffff;
   width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  padding: 20px;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  transition: transform 0.2s;
+}
+
+/* Slight hover animation */
+.container:hover {
+  transform: scale(1.02);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 28px;
-  font-weight: bold;
-  color: darkblue;
-  background-color: yellow;
-  padding: 10px;
-  border-radius: 6px;
+  font-weight: 700;
+  color: #3b4f7a;
+  background-color: #ffe66d;
+  padding: 12px;
+  border-radius: 8px;
 }
 
+/* Input area */
 .inputs {
   display: flex;
   margin-bottom: 20px;
@@ -34,21 +43,34 @@ h1 {
 
 #inp {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px 0 0 6px;
+  padding: 12px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px 0 0 8px;
   outline: none;
+  font-size: 16px;
 }
 
+#inp:focus {
+  border-color: #6c5ce7;
+}
+
+/* Add button */
 .inputs button {
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
-  background: #4CAF50;
+  background: #6c5ce7;
   color: #fff;
-  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
+.inputs button:hover {
+  background: #5a4bd6;
+}
+
+/* Task list */
 .text ul {
   list-style: none;
   padding: 0;
@@ -57,25 +79,46 @@ h1 {
 
 .text ul li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #fafafa;
-  border: 1px solid #eee;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  background: #f1f2f6;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 5px solid #6c5ce7;
+  transition: 0.2s ease;
+}
+
+/* Completed task style */
+.text ul li.completed {
+  background: #dfe4ea;
+  border-left-color: #2ecc71;
 }
 
 .text ul li.completed span {
   text-decoration: line-through;
-  color: #888;
+  color: #7f8c8d;
 }
 
+/* Delete button */
 .delete-btn {
   border: none;
   background: #e74c3c;
   color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Checkbox styling */
+.check {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-right: 10px;
 }
