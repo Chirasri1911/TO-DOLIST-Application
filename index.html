@@ -12,54 +12,12 @@
     <h1>ToDo App</h1>
     <div class="inputs">
       <input type="text" placeholder="Enter Your Task" id="inp">
-      <button onclick="Add()">Add</button>
+      <button id="addBtn">Add</button>
     </div>
     <div class="text"></div>
   </div>
 
-  <script>
-    let inputs = document.getElementById("inp");
-    let text = document.querySelector(".text");
-
-    // Function to add a new task
-    function Add() {
-      if (inputs.value == "") {
-        alert("Please Enter Task");
-      } else {
-        // Create list element
-        let newEle = document.createElement("ul");
-
-        // Create list item with checkbox, task text, and delete button
-        newEle.innerHTML = `
-          <li>
-            <input type="checkbox" class="check">
-            <span>${inputs.value}</span>
-            <button class="delete-btn">Delete</button>
-          </li>
-        `;
-
-        // Append new task to task container
-        text.appendChild(newEle);
-        inputs.value = "";
-
-        // Add event listener for delete button
-        newEle.querySelector(".delete-btn").addEventListener("click", function() {
-          newEle.remove();
-        });
-
-        // Add event listener for checkbox
-        newEle.querySelector(".check").addEventListener("change", function(e) {
-          let taskItem = newEle.querySelector("li");
-          if (e.target.checked) {
-            taskItem.classList.add("completed");
-          } else {
-            taskItem.classList.remove("completed");
-          }
-        });
-      }
-    }
-  </script>
+  <!-- Load external JS file -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
