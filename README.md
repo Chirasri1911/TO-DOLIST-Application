@@ -20,3 +20,8 @@ You can add tasks, mark them as completed, and delete them when done.
 ├── style.css # Styling for the app
 
 ---
+
+Visit the live demo hosted on **GitHub Pages**:  
+   👉 [Live App Link](https://chirasri1911.github.io/TO-DOLIST-Application/) 
+
+---
